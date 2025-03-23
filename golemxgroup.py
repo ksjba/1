@@ -134,8 +134,8 @@ def handle_attack(message):
         bot.reply_to(message, "❌ **𝐄𝐑𝐑𝐎𝐑:** 𝐏𝐎𝐑𝐓 𝐀𝐍𝐃 𝐓𝐈𝐌𝐄 𝐌𝐔𝐒𝐓 𝐁𝐄 𝐈𝐍𝐓𝐄𝐆𝐄𝐑𝐒!")
         return
 
-    if time_duration > 240:
-        bot.reply_to(message, "🚫 **𝐌𝐀𝐗 𝐃𝐔𝐑𝐀𝐓𝐈𝐎𝐍 = 240𝐬!**")
+    if time_duration > 180:
+        bot.reply_to(message, "🚫 **𝐌𝐀𝐗 𝐃𝐔𝐑𝐀𝐓𝐈𝐎𝐍 = 180𝐬!**")
         return
 
     # Get the user's profile picture
@@ -161,7 +161,7 @@ def handle_attack(message):
 
     pending_feedback[user_id] = True  
 
-    full_command = f"./bgmi {target} {port} {time_duration} 400"
+    full_command = f"./bgmi {target} {port} {time_duration} 300"
 
     try:
         subprocess.run(full_command, shell=True, check=True)
