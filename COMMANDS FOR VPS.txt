@@ -1,0 +1,21 @@
+sudo ufw enable
+sudo ufw allow ssh
+sudo ufw allow http
+sudo ufw allow https
+sudo ufw allow 10:30000/udp
+sudo ufw allow 10:30000/tcp
+sudo apt update
+sudo apt install python3-venv
+sudo apt install python3 python3-venv -y
+sudo apt install python3-pip
+python3 -m venv myenv
+source myenv/bin/activate
+git clone repo link 
+cd repo name 
+
+
+
+
+pip install telebot flask aiogram pyTelegramBotAPI python-telegram-bot pytz psutil motor && chmod +x * && nohup python3 pythonfile.py &> /dev/null &
+                                                                                                                                       👆👆👆👆
+                                                                                                                                       FILE NAME HERE 
