@@ -9,11 +9,11 @@ import time
 logging.basicConfig(filename="bot.log", level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # Your Telegram bot token
-bot = telebot.TeleBot('7210561375:AAHtR-7ugsgJW_YmtnMP5OxXzBcJsyJpjuk')
+bot = telebot.TeleBot('7084727197:AAFq55FlGW4QsrFyvmOdGgo1gGn9PoGXQVs')
 
 # Admin ID
-ADMINS = {5486683891}  # Add more admin IDs if needed
-OWNER_ID = 5486683891
+ADMINS = {1549147628}  # Add more admin IDs if needed
+OWNER_ID = 1549147628
 # Attack settings
 nxtlvl_PATH = "./bgmi"
 MAX_CONCURRENT_ATTACKS = 2  # Set the maximum number of concurrent attacks
