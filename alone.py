@@ -2,8 +2,8 @@ import asyncio
 from telegram import Update
 from telegram.ext import Application, CommandHandler, CallbackContext
 
-TELEGRAM_BOT_TOKEN = 'your bot token 🖕'
-ADMIN_USER_ID = 1234567890
+TELEGRAM_BOT_TOKEN = '8042326539:AAH4CdJsBrO9BM72u86Pv2v7u35ttokyqMs'
+ADMIN_USER_ID = 5486683891
 USERS_FILE = 'users.txt'
 attack_in_progress = False
 
@@ -30,8 +30,8 @@ async def start(update: Update, context: CallbackContext):
         "*➤ /remove <user_id>  ➔ Remove a user from DDOS attack usage (Admin Only) ⚠️*\n"
         "*➤ /attack <ip> <port> <time> ➔ Launch a DDOS attack (Approved Users Only) 💥*\n"
         "*➤ /help ➔ Display detailed usage instructions for this bot 🧑‍💻*\n\n"
-        "*💬 Owner: @GODxAloneboy*\n"
-        "*📢 Channel: [GODxCHEATS Channel](https://t.me/+03wLVBPurPk2NWRl)*"
+        "*💬 Owner: *\n"
+        "*📢 Channel: ()*"
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
 
@@ -48,8 +48,8 @@ async def help_command(update: Update, context: CallbackContext):
         "*1. Only approved users can launch attacks.*\n"
         "*2. Use responsibly and with permission, DDoS attacks are illegal without consent.*\n"
         "*3. Contact the bot owner @GODxAloneBOY for assistance or clarifications.*\n\n"
-        "*⚡ Owner: @GODxAloneboy*\n"
-        "*📢 Channel: [GODxCHEATS Channel](https://t.me/+03wLVBPurPk2NWRl)*"
+        "*⚡ Owner: *\n"
+        "*📢 Channel: ()*"
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
 
@@ -115,7 +115,7 @@ async def run_attack(chat_id, ip, port, time, context):
             "*⚡ Port: {port}*\n"
             "*⚡ Duration: {time} seconds*\n"
             "*⚡ The attack has been successfully finished and the target has been impacted! 💥*\n"
-            "*🔥 Owner @GODxAloneBOY*\n"
+            "*🔥 Owner *\n"
             "* *"
         ).format(ip=ip, port=port, time=time), parse_mode='Markdown')
 
@@ -127,7 +127,7 @@ async def attack(update: Update, context: CallbackContext):
     args = context.args
 
     if user_id not in users:
-        await context.bot.send_message(chat_id=chat_id, text="*🤡 You need to get permission to use this bot. Contact owner @GODxAloneBOY.*", parse_mode='Markdown')
+        await context.bot.send_message(chat_id=chat_id, text="*🤡 You need to get permission to use this bot. Contact owner .*", parse_mode='Markdown')
         return
 
     if len(args) != 3:
@@ -140,7 +140,7 @@ async def attack(update: Update, context: CallbackContext):
         f"*⭐ Target IP: {ip}*\n"
         f"*⭐ Target Port: {port}*\n"
         f"*⭐ Attack Duration: {time} seconds*\n"
-        f"*🔥 Owner @GODxAloneBOY*\n"
+        f"*🔥 Owner *\n"
         f"* *"
     ), parse_mode='Markdown')
 
